@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator & Diet Chart</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center align-items-center" style="height: 100vh;">
+      <div class="col-lg-6">
+        <div class="card">
+          <div id="gender-page" class="page active card-body">
+            <h4 class="text-center">আমি একজন:</h4>
+            <select id="gender" class="form-control mt-3">
+              <option value="male">পুরুষ</option>
+              <option value="female">মহিলা</option>
+            </select>
+            <button id="gender-next" class="btn btn-primary btn-block mt-3">Next</button>
+          </div>
+
+          <div id="age-page" class="page card-body">
+            <h4 class="text-center">আমার বয়স:</h4>
+            <input type="number" id="age" class="form-control mt-3" placeholder="Enter your age">
+            <button id="age-next" class="btn btn-primary btn-block mt-3">Next</button>
+          </div>
+
+          <div id="height-page" class="page card-body">
+            <h4 class="text-center">আমার উচ্চতা (cm):</h4>
+            <input type="number" id="height" class="form-control mt-3" placeholder="Enter your height">
+            <button id="height-next" class="btn btn-primary btn-block mt-3">Next</button>
+          </div>
+
+          <div id="weight-page" class="page card-body">
+            <h2 class="text-center">আমার ওজন (kg):</h2>
+            <input type="number" id="weight" class="form-control mt-3" placeholder="Enter your weight">
+            <button id="calculate" class="btn btn-success btn-block mt-3">Calculate</button>
+          </div>
+
+          <div id="result-page" class="page card-body">
+            <h5 class="text-left">BMI Result:</h5>
+            <p id="bmi-result" class="text-left"></p>
+            <h5 class="text-left">Daily Calories:</h5>
+            <p id="calories" class="text-left"></p>
+            <h5 class="text-center">Diet Chart:</h5>
+            <table id="diet-chart" class="table table-bordered">
+              <!-- Diet chart will be dynamically populated here -->
+            </table>
+            <div>
+              <h6 class="mt-5 font-weight-bold" >টক দইয়ের উপকারিতা:</h6>
+              <p class="mt-2 text-justify">টক দই হল এক ধরনের দুগ্ধজাত খাদ্য যা দুধের ব্যাক্টেরিয়ার গাঁজন হতে প্রস্তুত করা হয়। টক দইয়ে রয়েছে প্রো-বায়োটিক উপাদান যা  শরীরের ক্ষতিকার ব্যাক্টেরিয়াকে মেরে ফেলে রোগ প্রতিরোধ ক্ষমতা বৃদ্ধি করে। 
+                টক দই এর গুরুত্বপুর্ন উপকারীতাসমূহ-
+                </p>
+                <ul>
+                  <li>উচ্চ রক্তচাপ কমায়</li>
+                  <li>হাড় ও দাঁত শক্তিশালী করে</li>
+                  <li>বাড়তি ওজন কমায়</li>
+                  <li>স্ট্রেস এবং স্নায়ুবিক উত্তেজনা কমায়</li>
+                  <li>হ্রদযন্ত্রের কার্যকারীতা বৃদ্ধি করে</li>
+                  <li>ত্বক ও চুলের স্বাস্থ্য সুরক্ষিত রাখে</li>
+                  <li>পেট ফোলা এবং ডায়রিয়া সমস্যা সমাধানে কার্যকরী</li>
+                </ul>
+            </div>
+
+            <div>
+              <h6 class="mt-5 font-weight-bold" >কেনো শক্তি টক দই?</h6>
+              <p class="mt-2">বিএসটিআই কর্তৃক অনুমোদিত। পরিমিত পরিমানে সকল উপাদান সমৃদ্ধ।
+                এতে রয়েছে -                
+                </p class="mt-2 text-justify">
+                <p>
+                  <b>প্রোবায়োটিক-</b> ক্ষতিকারক ব্যাক্টেরিয়া ধ্বংস করে </br>
+                  <b>ক্যালসিয়াম-</b> দেহ  ও হাড় গঠনে সহায়ক </br>
+                  <b>প্রোটিন-</b> রোগ প্রতিরোধ ক্ষমতা বৃদ্ধি করে এবং স্বাস্থ্য সুরক্ষিত রাখে। </br>
+                  আরও রয়েছে আয়রন,জিঙ্ক, ভিটামিন-এ এবং আয়োডিন যা বিভিন্ন শারীরিক কার্যাবলী নিয়ন্ত্রন এ ভুমিকা রাখে।
+                </p>
+            </div>
+           
+            <button id="save-now" class="btn btn-primary btn-block mt-3">Save Now</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
